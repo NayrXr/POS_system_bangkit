@@ -11,24 +11,15 @@ import MonthlyCampaign from './MonthlyCampaign';
 import Subscription from './Subscription';
 import TrafficSource from './TrafficSource';
 import ProductsStatistics from './ProductsStatistics';
+import CustomerSegmentation from './CustomerSegmentation';
 
 const Analytics = () => {
 
   return (
     <React.Fragment>
-      <BreadCrumb title='Analytics' pageTitle='Dashboards' />
+      <BreadCrumb title='Customer Segmentation' pageTitle='Dashboards' />
       <div className="grid grid-cols-12 gap-x-5">
-        <Widgets />
-        <LocationBased />
-        <Interaction />
-        <UserDevice />
-        <Satisfaction />
-        <DailyVisit />
-        <ProductsStatistics />
-        <Reports />
-        <MonthlyCampaign />
-        <Subscription />
-        <TrafficSource />
+        <CustomerSegmentation />
       </div>
     </React.Fragment>
   );

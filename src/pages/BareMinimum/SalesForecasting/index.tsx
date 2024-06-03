@@ -13,7 +13,7 @@ const HRDashboard = () => {
 
     return (
         <React.Fragment>
-            <BreadCrumb title='HR' pageTitle='Dashboards' />
+            <BreadCrumb title='Sales Forecasting' pageTitle='Dashboards' />
             <div className="grid grid-cols-12 2xl:grid-cols-12 gap-x-5">
                 <div className="col-span-12 md:order-1 xl:col-span-8 2xl:col-span-6">
                     <h5 className="mb-2">Welcome Paula Keenan 🎉</h5>
