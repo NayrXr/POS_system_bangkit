@@ -1,2 +1,2 @@
-# tailwick-react
+# Frontend
 tailwick-react
