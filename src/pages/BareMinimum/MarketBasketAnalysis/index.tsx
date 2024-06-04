@@ -11,6 +11,7 @@ import SalesMonth from './SalesMonth';
 import TopSellingProducts from './TopSellingProducts';
 import Audience from './Audience';
 import { useNavigate } from 'react-router-dom';
+import MBA from './MBA'
 
 const Ecommerce = () => {
 
@@ -21,16 +22,7 @@ const Ecommerce = () => {
         <React.Fragment>
             <BreadCrumb title='MBA' pageTitle='Dashboards' />
             <div className="grid grid-cols-12 gap-x-5">
-                <WelcomeWidget />
-                <OrderStatistics />
-                <Widgets />
-                <SalesRevenue />
-                <TrafficResources />
-                <ProductsOrders />
-                <CustomerService />
-                <SalesMonth />
-                <TopSellingProducts />
-                <Audience />
+                < MBA />
             </div>
         </React.Fragment>
     );

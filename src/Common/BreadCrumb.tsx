@@ -7,7 +7,7 @@ interface BreadCrumbProps {
 }
 const BreadCrumb = ({ title, pageTitle }: BreadCrumbProps) => {
 
-    document.title = `${title} | Tailwick - React Admin & Dashboard Template`;
+    document.title = `${title} | C241-PS01`;
 
     return (
         <React.Fragment>
