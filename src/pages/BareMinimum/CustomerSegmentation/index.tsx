@@ -19,6 +19,9 @@ const Analytics = () => {
     <React.Fragment>
       <BreadCrumb title='Customer Segmentation' pageTitle='Dashboards' />
       <div className="grid grid-cols-12 gap-x-5">
+        <Widgets />
+        </div>
+      <div>  
         <CustomerSegmentation />
       </div>
     </React.Fragment>
