@@ -7,7 +7,7 @@ const TrafficSource = () => {
             <div className="col-span-12 lg:col-span-6 order-[15] 2xl:order-1 card 2xl:col-span-3">
                 <div className="card-body">
                     <div className="flex items-center gap-4 mb-3">
-                        <h6 className="text-15 grow">Traffic Source</h6>
+                        <h6 className="text-15 grow">Barplot</h6>
                         <Link to="#" className="underline transition-all duration-200 ease-linear text-custom-500 hover:text-custom-700">See More</Link>
                     </div>
                     <div className="flex flex-col gap-5">
@@ -17,7 +17,7 @@ const TrafficSource = () => {
                                 <span className="text-slate-500 dark:text-zink-200">54,963</span>
                             </div>
                             <div className="w-full h-3.5 rounded bg-slate-200 dark:bg-zink-600">
-                                <div className="h-3.5 rounded bg-custom-500" style={{width: "89%"}}></div>
+                                <div className="h-3.5 rounded bg-custom-500" style={{width: "100%"}}></div>
                             </div>
                         </div>
                         <div>

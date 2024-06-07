@@ -21,9 +21,15 @@ const Analytics = () => {
       <div className="grid grid-cols-12 gap-x-5">
         <Widgets />
         </div>
-      <div>  
-        <CustomerSegmentation />
-      </div>
+      <div className="grid grid-cols-12 gap-x-5">  
+        <Subscription />
+        <TrafficSource />
+        </div>
+
+      <div><CustomerSegmentation />
+        </div>
+      
+
     </React.Fragment>
   );
 };
