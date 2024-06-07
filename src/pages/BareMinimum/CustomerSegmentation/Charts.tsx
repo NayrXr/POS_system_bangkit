@@ -590,6 +590,7 @@ const ReportChart = ({ chartId }: any) => {
     );
 };
 
+
 const SubscriptionChart = ({ chartId }: any) => {
     const chartColors = useChartColors(chartId);
     //Subscription Distribution
