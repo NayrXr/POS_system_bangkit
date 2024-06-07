@@ -29,6 +29,12 @@ const menuData: any = [
                 link: '/sales-forecasting',
                 parentId: "dashboard"
             },
+            {
+                id: 'additem',
+                label: 'Tambah Item',
+                link: '/additem',
+                parentId: "dashboard"
+            },
         ]
     }
 ]

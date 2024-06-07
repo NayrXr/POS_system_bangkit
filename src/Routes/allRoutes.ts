@@ -2,6 +2,7 @@
 import CustomerSegmentation from "../pages/BareMinimum/CustomerSegmentation";
 import MarketBasketAnalysis from "../pages/BareMinimum/MarketBasketAnalysis";
 import SalesForecasting from "../pages/BareMinimum/SalesForecasting";
+import InputMask from "../pages/BareMinimum/InputMask";
 
 // dashboard
 import Analytics from "pages/Dashboards/Analytics";
@@ -103,7 +104,6 @@ import Pagination from "pages/Components/Navigation/Pagination";
 // forms
 import FormsBasic from "pages/Components/Forms/Basic";
 import FormValidation from "pages/Components/Forms/Validation";
-import InputMask from "pages/Components/Forms/InputMask";
 import FormSelect from "pages/Components/Forms/Select";
 import CheckboxRadio from "pages/Components/Forms/CheckboxRadio";
 import FormSwitches from "pages/Components/Forms/Switches";
@@ -211,6 +211,8 @@ const authProtectedRoutes: Array<RouteObject> = [
   { path: "/customer-segmentation", component: CustomerSegmentation },
   { path: "/market-basket-analysis", component: MarketBasketAnalysis },
   { path: "/sales-forecasting", component: SalesForecasting },
+  { path: "/additem", component: InputMask },
+
 
   // Dashboard
   { path: "/", component: Ecommerce },
