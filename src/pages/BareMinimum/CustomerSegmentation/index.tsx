@@ -4,7 +4,6 @@ import Widgets from './Widgets';
 import LocationBased from './LocationBased';
 import Interaction from './Interaction';
 import UserDevice from './UserDevice';
-import Satisfaction from './Satisfaction';
 import DailyVisit from './DailyVisit';
 import Reports from './Reports';
 import MonthlyCampaign from './MonthlyCampaign';
@@ -13,6 +12,8 @@ import TrafficSource from './TrafficSource';
 import ProductsStatistics from './ProductsStatistics';
 import CustomerSegmentation from './CustomerSegmentation';
 import { BasicBarChart } from './BasicBarChart';
+import { DistributedColumns } from './DistributedColumns';
+import DefaultWithout from './DefaultWithout';
 
 const Analytics = () => {
 
@@ -23,16 +24,17 @@ const Analytics = () => {
         <Widgets />
         </div>
         
-      <div className="grid grid-cols-2 gap-x-5">
-      <Subscription />
-      <div className="card">
-        <div className="card-body">
-          <h6 className="mb-4 text-15">Basic</h6>
-          <BasicBarChart chartId="basicBar" />
-        </div>
+      <div className="grid grid-cols-12 gap-x-5">
+        <Subscription />
+        <TrafficSource />
       </div>
-    </div>
-
+      <div>
+        <ProductsStatistics />
+        </div>
+      < div className="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+        <DistributedColumns />
+        <DefaultWithout />
+      </div>
       <div><CustomerSegmentation />
         </div>
       
