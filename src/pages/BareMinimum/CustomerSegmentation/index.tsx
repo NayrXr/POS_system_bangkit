@@ -13,6 +13,7 @@ import ProductsStatistics from './ProductsStatistics';
 import CustomerSegmentation from './CustomerSegmentation';
 import { BasicBarChart } from './BasicBarChart';
 import { DistributedColumns } from './DistributedColumns';
+import { GroupedChart } from './GroupedChart';
 import DefaultWithout from './DefaultWithout';
 
 const Analytics = () => {
@@ -28,13 +29,16 @@ const Analytics = () => {
         <Subscription />
         <TrafficSource />
       </div>
-      <div>
-        <ProductsStatistics />
-        </div>
+
       < div className="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
         <DistributedColumns />
-        <DefaultWithout />
+        <GroupedChart />
       </div>
+
+      <div>
+        <ProductsStatistics />
+      </div>
+
       <div><CustomerSegmentation />
         </div>
       
