@@ -1,8 +1,4 @@
-
-
-
-
-const example = [
+const example1 = [
     {
         id: "productsCheck1",
         productName: "SmartTech Pro-4K Ultra HD TV",
@@ -15,4 +11,4 @@ const example = [
         status: "Active"
     }];
 
-export {example};
+export {example1};

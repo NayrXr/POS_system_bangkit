@@ -1,3 +1,8 @@
+// Data BareMinimum
+import { example } from "./customersegmentation";
+import { example1 } from "./mba";
+
+
 import {
     ProductsStatisticsData,
     ProductOrdersData,
@@ -40,6 +45,11 @@ import { basic, reactTableData } from "./table";
 import { pricingData, cardData } from "./pages";
 
 export {
+    // Bare minimum
+    example,
+    example1,
+
+    //
     ProductsStatisticsData,
     ProductOrdersData,
     widgetsData,

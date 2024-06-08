@@ -1,18 +1,18 @@
 import TableContainer from 'Common/TableContainer';
 import React, { useMemo, useState } from 'react';
-import { example } from "Common/data";
+import { example1 } from "Common/data";
 import { CheckCircle2, Search, XCircle } from 'lucide-react';
 import filterDataBySearch from 'Common/filterDataBySearch';
 
 const ProductsStatistics = () => {
 
-    const [data, setData] = useState(example);
+    const [data, setData] = useState(example1);
 
     // Search Data
     const filterSearchData = (e: any) => {
         const search = e.target.value;
         const keysToSearch = ['productName', 'status'];
-        filterDataBySearch(example, search, keysToSearch, setData);
+        filterDataBySearch(example1, search, keysToSearch, setData);
     };
 
     const columns = useMemo(() => [
