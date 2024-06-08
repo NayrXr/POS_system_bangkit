@@ -2,7 +2,18 @@
 import CustomerSegmentation from "../pages/BareMinimum/CustomerSegmentation";
 import MarketBasketAnalysis from "../pages/BareMinimum/MarketBasketAnalysis";
 import SalesForecasting from "../pages/BareMinimum/SalesForecasting";
-import InputMask from "../pages/BareMinimum/InputMask";
+
+
+
+import ListView from "pages/BareMinimum/Produk/Products/ListView";
+import GridView from "pages/BareMinimum/Produk/Products/GridView";
+import Overview from "pages/BareMinimum/Produk/Products/Overview";
+import AddNew from "pages/BareMinimum/Produk/Products/AddNew";
+import ShoppingCart from "pages/BareMinimum/Produk/ShoppingCart";
+import Checkout from "pages/BareMinimum/Produk/Checkout";
+import Orders from "pages/BareMinimum/Produk/Orders";
+import OrderOverview from "pages/BareMinimum/Produk/OrderOverview";
+import Sellers from "pages/BareMinimum/Produk/Sellers";
 
 // dashboard
 import Analytics from "pages/Dashboards/Analytics";
@@ -23,16 +34,7 @@ import MonthGrid from "pages/Calendar/MonthGrid";
 import MultiMonthStack from "pages/Calendar/MultiMonthStack";
 
 // Ecommerce
-import ListView from "pages/Ecommerce/Products/ListView";
-import GridView from "pages/Ecommerce/Products/GridView";
-import Overview from "pages/Ecommerce/Products/Overview";
-import AddNew from "pages/Ecommerce/Products/AddNew";
-import ShoppingCart from "pages/Ecommerce/ShoppingCart";
-import Checkout from "pages/Ecommerce/Checkout";
-import Orders from "pages/Ecommerce/Orders";
-import OrderOverview from "pages/Ecommerce/OrderOverview";
-import Sellers from "pages/Ecommerce/Sellers";
-
+import InputMask from "pages/Components/Forms/InputMask";
 // HR Management
 import EmployeeList from "pages/HRManagement/EmployeeList";
 import Holidays from "pages/HRManagement/Holidays";
@@ -211,7 +213,15 @@ const authProtectedRoutes: Array<RouteObject> = [
   { path: "/customer-segmentation", component: CustomerSegmentation },
   { path: "/market-basket-analysis", component: MarketBasketAnalysis },
   { path: "/sales-forecasting", component: SalesForecasting },
-  { path: "/additem", component: InputMask },
+  { path: "/produk", component: Orders },
+  { path: "/apps-ecommerce-product-list", component: ListView },
+  { path: "/apps-ecommerce-product-grid", component: GridView },
+  { path: "/apps-ecommerce-product-overview", component: Overview },
+  { path: "/apps-ecommerce-product-create", component: AddNew },
+  { path: "/apps-ecommerce-cart", component: ShoppingCart },
+  { path: "/apps-ecommerce-checkout", component: Checkout },
+  { path: "/apps-ecommerce-order-overview", component: OrderOverview },
+  { path: "/apps-ecommerce-sellers", component: Sellers },
 
 
   // Dashboard

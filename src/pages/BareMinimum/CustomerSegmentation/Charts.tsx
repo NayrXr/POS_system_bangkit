@@ -598,7 +598,7 @@ const SubscriptionChart = ({ chartId }: any) => {
     var options: any = {
         labels: ['Beginner', 'Intermediate', 'Enterprise', 'VIP', 'Professional'],
         chart: {
-            height: 270,
+            height: 370,
             type: 'donut',
 
         },
@@ -639,7 +639,7 @@ const SubscriptionChart = ({ chartId }: any) => {
                 id="subscriptionDistribution"
                 className="apex-charts"
                 type='donut'
-                height={270}
+                height={370}
             />
         </React.Fragment>
     );

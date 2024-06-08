@@ -17,7 +17,7 @@ const Widgets = () => {
                     <h5 className="mt-5 mb-2">
                         <CountUp end={15876} className="counter-value" />
                     </h5>
-                    <p className="text-slate-500 dark:text-slate-200">Total Users</p>
+                    <p className="text-slate-500 dark:text-slate-200">Total Customer</p>
                 </div>
             </div>
             <div className="order-2 md:col-span-6 lg:col-span-3 col-span-12 2xl:order-1 bg-orange-100 dark:bg-orange-500/20 card 2xl:col-span-2 group-data-[skin=bordered]:border-orange-500/20 relative overflow-hidden">

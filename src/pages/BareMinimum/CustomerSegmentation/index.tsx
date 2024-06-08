@@ -12,6 +12,7 @@ import Subscription from './Subscription';
 import TrafficSource from './TrafficSource';
 import ProductsStatistics from './ProductsStatistics';
 import CustomerSegmentation from './CustomerSegmentation';
+import { BasicBarChart } from './BasicBarChart';
 
 const Analytics = () => {
 
@@ -21,10 +22,16 @@ const Analytics = () => {
       <div className="grid grid-cols-12 gap-x-5">
         <Widgets />
         </div>
-      <div className="grid grid-cols-12 gap-x-5">  
-        <Subscription />
-        <TrafficSource />
+        
+      <div className="grid grid-cols-2 gap-x-5">
+      <Subscription />
+      <div className="card">
+        <div className="card-body">
+          <h6 className="mb-4 text-15">Basic</h6>
+          <BasicBarChart chartId="basicBar" />
         </div>
+      </div>
+    </div>
 
       <div><CustomerSegmentation />
         </div>

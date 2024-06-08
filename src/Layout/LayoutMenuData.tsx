@@ -6,8 +6,8 @@ const menuData: any = [
         isTitle: true,
     },
     {
-        id: "dashboard",
-        label: 'Dashboards',
+        id: "analysis",
+        label: 'Analysis',
         link: "/#",
         icon: <MonitorDot />,
         subItems: [
@@ -15,25 +15,46 @@ const menuData: any = [
                 id: 'customersegmentationdashboard',
                 label: 'Customer Segmentation',
                 link: '/customer-segmentation',
-                parentId: "dashboard"
+                parentId: "analysis"
             },
             {
                 id: 'marketbasketanalysisdashboard',
                 label: 'Market Basket Analysis (MBA)',
                 link: '/market-basket-analysis',
-                parentId: "dashboard"
+                parentId: "analysis"
             },
             {
                 id: 'salesforecastingdashboard',
                 label: 'Sales Forecasting',
                 link: '/sales-forecasting',
-                parentId: "dashboard"
+                parentId: "analysis"
             },
+        ]
+    },
+
+    {
+        id: "data",
+        label: 'Data',
+        link: "/#",
+        icon: <ShoppingBag />,
+        subItems: [
             {
                 id: 'additem',
-                label: 'Tambah Item',
-                link: '/additem',
-                parentId: "dashboard"
+                label: 'Tambah Produk',
+                link: '/addproduk',
+                parentId: "produk"
+            },
+            {
+                id: 'addcust',
+                label: 'Tambah Customer',
+                link: '/addcustomer',
+                parentId: "analysis"
+            },
+            {
+                id: 'produk',
+                label: 'Produk',
+                link: '/produk',
+                parentId: "analysis"
             },
         ]
     }
