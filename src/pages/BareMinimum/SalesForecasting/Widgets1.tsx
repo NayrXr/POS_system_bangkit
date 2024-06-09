@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Cog, Coins, Kanban, ListFilter, Users } from 'lucide-react';
 import CountUp from 'react-countup';
 import { Dropdown } from 'Common/Components/Dropdown';
-import { PerspectiveChart } from './Charts';
 import { Link } from 'react-router-dom';
 
 interface Data {
@@ -11,7 +10,7 @@ interface Data {
 
 
 
-const Widgets = () => {
+const Widgets1 = () => {
     const [total_revenue, setTotalRevenue] = useState(0);
 
     useEffect(() => {
@@ -76,4 +75,4 @@ const Widgets = () => {
     );
 };
 
-export default Widgets;
+export default Widgets1;
