@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import ReactApexChart from "react-apexcharts";
 import useChartColors from "Common/useChartColors";
 
@@ -594,9 +594,20 @@ const ReportChart = ({ chartId }: any) => {
     );
 };
 
+interface Data {
+    series: [];
+  }
 
 const SubscriptionChart = ({ chartId }: any) => {
     
+    const [series1, setSeries] = useState(0);
+
+    useEffect(() => {
+      fetch('https://ps01cs2-g463lwzijq-et.a.run.app/customers-piechart')
+       .then(response => response.json())
+       .then(data => setSeries(data.series))
+       .catch(error => console.error('Error:', error));
+    }, []);
     const chartColors = useChartColors(chartId);
     //Subscription Distribution
     const series = [44, 55, 41, 17, 15];

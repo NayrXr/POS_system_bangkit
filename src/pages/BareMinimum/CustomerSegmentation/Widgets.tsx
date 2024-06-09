@@ -7,12 +7,18 @@ import { Link } from 'react-router-dom';
 
 interface Data {
     total_revenue: string;
+    total_user: string;
+    total_orders: string;
+    total_products: string;
   }
 
 
 
 const Widgets = () => {
     const [total_revenue, setTotalRevenue] = useState(0);
+    const [total_user, setTotaluser] = useState(0);
+    const [total_orders, setTotalOrder] = useState(0);
+    const [total_products, setTotalProduct] = useState(0);
 
     useEffect(() => {
       fetch('https://ps01cs-g463lwzijq-et.a.run.app/api/total_revenue')
@@ -21,6 +27,27 @@ const Widgets = () => {
        .catch(error => console.error('Error:', error));
     }, []);
 
+    useEffect(() => {
+        fetch('https://ps01cs-g463lwzijq-et.a.run.app/api/total_users')
+         .then(response => response.json())
+         .then(data => setTotaluser(data.total_users))
+         .catch(error => console.error('Error:', error));
+      }, []);
+
+
+    useEffect(() => {
+        fetch('https://ps01cs-g463lwzijq-et.a.run.app/api/total_orders')
+         .then(response => response.json())
+         .then(data =>  setTotalOrder(data.total_orders))
+         .catch(error => console.error('Error:', error));
+      }, []);
+
+    useEffect(() => {
+        fetch('https://ps01cs-g463lwzijq-et.a.run.app/api/total_products')
+         .then(response => response.json())
+         .then(data => setTotalProduct(data.total_products))
+         .catch(error => console.error('Error:', error));
+      }, []);
     return (
         <React.Fragment>
             <div className="order-1 md:col-span-6 lg:col-span-3 col-span-12 2xl:order-1 bg-green-100 dark:bg-green-500/20 card 2xl:col-span-2 group-data-[skin=bordered]:border-green-500/20 relative overflow-hidden">
@@ -30,7 +57,7 @@ const Widgets = () => {
                         <Users />
                     </div>
                     <h5 className="mt-5 mb-2">
-                        <CountUp end={15876} className="counter-value" />
+                        <CountUp end={total_user} className="counter-value" />
                     </h5>
                     <p className="text-slate-500 dark:text-slate-200">Total Customer</p>
                 </div>
@@ -42,8 +69,8 @@ const Widgets = () => {
                     <Cog />
                     </div>
                     <h5 className="mt-5 mb-2">
-                        <CountUp end={103.15} decimals={2} className="counter-value" />
-                        k</h5>
+                        <CountUp end={total_orders} className="counter-value" />
+                    </h5>
                     <p className="text-slate-500 dark:text-slate-200">Total Order</p>
                 </div>
             </div>
@@ -67,9 +94,9 @@ const Widgets = () => {
                         <Users />
                     </div>
                     <h5 className="mt-5 mb-2">
-                    <CountUp end={11.21} decimals={2} className="counter-value" />%
+                    <CountUp end={total_products}className="counter-value" />
                         </h5>
-                    <p className="text-slate-500 dark:text-slate-200">Bounce Rate</p>
+                    <p className="text-slate-500 dark:text-slate-200">Total Product</p>
                 </div>
             </div>
         </React.Fragment>
