@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import ReactApexChart from "react-apexcharts";
 import useChartColors from "Common/useChartColors";
 
 const BasicBarChart = ({ chartId }: any) => {
+
 
     const chartColors = useChartColors(chartId);
     //basic bar
