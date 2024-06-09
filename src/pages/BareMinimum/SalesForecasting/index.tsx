@@ -9,6 +9,7 @@ import Widgets2 from './Widgets2';
 import { ChevronDown, Cog, Coins, Kanban, ListFilter, Users } from 'lucide-react';
 import { Dropdown } from 'Common/Components/Dropdown';
 import { PerspectiveChart } from './datachart';
+import { DataLabelsBar } from './DataLabelsBar';
 
 
 const HRDashboard = () => {
@@ -59,6 +60,7 @@ const HRDashboard = () => {
                     <div id="chartdiv"></div>
                 </div>
             </div>
+            <div><DataLabelsBar/> </div>
         </React.Fragment>
     );
 };
