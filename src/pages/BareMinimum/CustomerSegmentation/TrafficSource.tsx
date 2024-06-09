@@ -44,7 +44,6 @@ const TrafficSource = () => {
                 <div className="card-body">
                     <div className="flex items-center gap-4 mb-3">
                         <h6 className="text-15 grow">Total Revenue per Membership</h6>
-                        <Link to="#" className="underline transition-all duration-200 ease-linear text-custom-500 hover:text-custom-700">See More</Link>
                     </div>
                     <div className="flex flex-col gap-5">
                         <div>
