@@ -50,7 +50,7 @@ const TrafficSource = () => {
                         <div>
                             <div className="flex items-center justify-between gap-4 mb-2">
                                 <h6>{clusterLabels[0]}</h6>
-                                <span className="text-slate-500 dark:text-zink-200">
+                                <span className="text-slate-500 dark:text-zink-200">Rp.
                                 <CountUp end={totalSpend[0]} className='counter-value'/></span>
                             </div>
                             <div className="w-full h-3.5 rounded bg-slate-200 dark:bg-zink-600">
@@ -60,7 +60,7 @@ const TrafficSource = () => {
                         <div>
                             <div className="flex items-center justify-between gap-4 mb-2">
                                 <h6>{clusterLabels[1]}</h6>
-                                <span className="text-slate-500 dark:text-zink-200">
+                                <span className="text-slate-500 dark:text-zink-200">Rp.
                                 <CountUp end={totalSpend[1]} className='counter-value'/></span>
                             </div>
                             <div className="w-full h-3.5 rounded bg-slate-200 dark:bg-zink-600">
@@ -70,7 +70,7 @@ const TrafficSource = () => {
                         <div>
                             <div className="flex items-center justify-between gap-4 mb-2">
                                 <h6>{clusterLabels[2]}</h6>
-                                <span className="text-slate-500 dark:text-zink-200">
+                                <span className="text-slate-500 dark:text-zink-200">Rp.
                                 <CountUp end={totalSpend[2]} className='counter-value'/></span>
                             </div>
                             <div className="w-full h-3.5 rounded bg-slate-200 dark:bg-zink-600">
@@ -80,7 +80,7 @@ const TrafficSource = () => {
                         <div>
                             <div className="flex items-center justify-between gap-4 mb-2">
                                 <h6>{clusterLabels[3]}</h6>
-                                <span className="text-slate-500 dark:text-zink-200">
+                                <span className="text-slate-500 dark:text-zink-200">Rp.
                                 <CountUp end={totalSpend[3]} className='counter-value'/></span>
                             </div>
                             <div className="w-full h-3.5 rounded bg-slate-200 dark:bg-zink-600">
@@ -90,7 +90,7 @@ const TrafficSource = () => {
                         <div>
                             <div className="flex items-center justify-between gap-4 mb-2">
                                 <h6>{clusterLabels[4]}</h6>
-                                <span className="text-slate-500 dark:text-zink-200">
+                                <span className="text-slate-500 dark:text-zink-200">Rp.
                                 <CountUp end={totalSpend[4]} className='counter-value'/></span>
                             </div>
                             <div className="w-full h-3.5 rounded bg-slate-200 dark:bg-zink-600">
