@@ -5,6 +5,10 @@ import useChartColors from "Common/useChartColors";
 //import images 
 import logoSm from "assets/images/logo-sm.png";
 
+
+
+
+
 const PerspectiveChart = ({ chartId }: any) => {
 
     const chartColors = useChartColors(chartId);
@@ -592,6 +596,7 @@ const ReportChart = ({ chartId }: any) => {
 
 
 const SubscriptionChart = ({ chartId }: any) => {
+    
     const chartColors = useChartColors(chartId);
     //Subscription Distribution
     const series = [44, 55, 41, 17, 15];

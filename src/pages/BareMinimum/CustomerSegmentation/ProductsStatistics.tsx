@@ -1,6 +1,6 @@
 import TableContainer from 'Common/TableContainer';
 import React, { useMemo, useState } from 'react';
-import { example } from "Common/data";
+import { example } from "./data/datacustomersegmentation";
 import { CheckCircle2, Search, XCircle } from 'lucide-react';
 import filterDataBySearch from 'Common/filterDataBySearch';
 

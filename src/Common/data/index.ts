@@ -1,5 +1,4 @@
 // Data BareMinimum
-import { example } from "./customersegmentation";
 import { example1 } from "./mba";
 
 
@@ -46,7 +45,6 @@ import { pricingData, cardData } from "./pages";
 
 export {
     // Bare minimum
-    example,
     example1,
 
     //
