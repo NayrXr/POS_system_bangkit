@@ -598,13 +598,18 @@ const ReportChart = ({ chartId }: any) => {
 
 
 const SubscriptionChart = ({ chartId }: any) => {
-
+    const [chartData, setChartData] = useState({ labels: [], series: [] });
+    useEffect(() => {
+        fetch('https://ps01cs2-g463lwzijq-et.a.run.app/customers-piechart')
+          .then(response => response.json())
+          .then(data => setChartData(data))
+          .catch(error => console.error('Error fetching data:', error));
+      }, []);
     
     const chartColors = useChartColors(chartId);
     //Subscription Distribution
-    const series = [1,1,1,1,1,1];
     var options: any = {
-        labels: ['Gold'],
+        labels: chartData.labels,
         chart: {
             height: 370,
             type: 'donut',
@@ -642,7 +647,7 @@ const SubscriptionChart = ({ chartId }: any) => {
             <ReactApexChart
                 dir="ltr"
                 options={options}
-                series={series}
+                series={chartData.series}
                 data-chart-colors='["bg-custom-500", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]'
                 id="subscriptionDistribution"
                 className="apex-charts"
