@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import ReactApexChart from "react-apexcharts";
 import useChartColors from "Common/useChartColors";
 
 const BasicBarChart = ({ chartId }: any) => {
 
+    const [chartData, setChartData] = useState({ categories: [], values: [] });
+    useEffect(() => {
+        fetch('https://ps01mba-g463lwzijq-et.a.run.app/api/basic-barplot')
+          .then(response => response.json())
+          .then(data => setChartData(data))
+          .catch(error => console.error('Error fetching data:', error));
+      }, []);
+
     const chartColors = useChartColors(chartId);
     //basic bar
     const series = [{
-        data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+        data: chartData.values
     }];
     var options : any = {
         chart: {
@@ -25,9 +33,7 @@ const BasicBarChart = ({ chartId }: any) => {
             enabled: false
         },
         xaxis: {
-            categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan',
-                'United States', 'China', 'Germany'
-            ],
+            categories: chartData.categories,
         }
     };
 

@@ -40,9 +40,6 @@ const Ecommerce = () => {
                 <div>
                     < ProductsStatistics />
                 </div>
-                <div>
-                    < MBA />
-                </div>
         </React.Fragment>
     );
 };

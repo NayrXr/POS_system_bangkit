@@ -1,18 +1,26 @@
 import TableContainer from 'Common/TableContainer';
-import React, { useMemo, useState } from 'react';
-import { example1 } from "Common/data";
+import React, { useMemo, useState,useEffect } from 'react';
+import fetchData from './data/dataMBA';
 import { CheckCircle2, Search, XCircle } from 'lucide-react';
 import filterDataBySearch from 'Common/filterDataBySearch';
 
 const ProductsStatistics = () => {
 
-    const [data, setData] = useState(example1);
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const getData = async () => {
+            const dataMBA = await fetchData();
+            setData(dataMBA);
+        };
+        getData();
+    }, []);
 
     // Search Data
     const filterSearchData = (e: any) => {
         const search = e.target.value;
         const keysToSearch = ['productName', 'status'];
-        filterDataBySearch(example1, search, keysToSearch, setData);
+        filterDataBySearch(data, search, keysToSearch, setData);
     };
 
     const columns = useMemo(() => [
@@ -32,69 +40,64 @@ const ProductsStatistics = () => {
             ),
         },
         {
-            header: "Products",
-            accessorKey: "productName",
+            header: "Antecedent Support",
+            accessorKey: "antecedent support",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "Price",
-            accessorKey: "price",
+            header: "antecedents",
+            accessorKey: "antecedents",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "Income",
-            accessorKey: "income",
+            header: "confidence",
+            accessorKey: "confidence",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "Sales",
-            accessorKey: "sales",
+            header: "consequent support",
+            accessorKey: "consequent support",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "View",
-            accessorKey: "view",
+            header: "consequents",
+            accessorKey: "consequents",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "Click",
-            accessorKey: "click",
+            header: "count",
+            accessorKey: "count",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "Click (%)",
-            accessorKey: "clickPercentage",
+            header: "leverage (%)",
+            accessorKey: "leverage",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "Status",
-            accessorKey: "status",
+            header: "lift",
+            accessorKey: "lift",
             enableColumnFilter: false,
             enableSorting: true,
-            cell: (cell: any) => (
-                <>
-                    {cell.row.original.status === "Active" ? (
-                        <span className="inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded border bg-green-100 border-transparent text-green-500 dark:bg-green-500/20 dark:border-transparent">
-                            <CheckCircle2 className="size-3 ltr:mr-1 rtl:ml-1"></CheckCircle2>
-                            {cell.row.original.status}
-                        </span>
-                    ) : (
-                        <span className="inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded border bg-red-100 border-transparent text-red-500 dark:bg-red-500/20 dark:border-transparent">
-                            <XCircle className="size-3 ltr:mr-1 rtl:ml-1"></XCircle>
-                            {cell.row.original.status}
-                        </span>
-                    )
-                    }
-
-                </>
-            ),
+        },
+        {
+            header: "support",
+            accessorKey: "support",
+            enableColumnFilter: false,
+            enableSorting: true,
+        },
+        {
+            header: "zhangs_metric",
+            accessorKey: "zhangs_metric",
+            enableColumnFilter: false,
+            enableSorting: true,
         },
     ], []
     );

@@ -3,7 +3,7 @@ import ReactApexChart from "react-apexcharts";
 import useChartColors from "Common/useChartColors";
 
 const DataLabelsBar = ({ chartId }: any) => {
-
+    
     const chartColors = useChartColors(chartId);
     //Custom DataLabels Bar
     const series = [{
