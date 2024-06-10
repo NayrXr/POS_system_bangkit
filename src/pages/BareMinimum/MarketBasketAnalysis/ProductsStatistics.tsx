@@ -19,7 +19,7 @@ const ProductsStatistics = () => {
     // Search Data
     const filterSearchData = (e: any) => {
         const search = e.target.value;
-        const keysToSearch = ['productName', 'status'];
+        const keysToSearch = ['antecedents', 'confidence'];
         filterDataBySearch(data, search, keysToSearch, setData);
     };
 
@@ -123,7 +123,7 @@ const ProductsStatistics = () => {
                         isPagination={true}
                         columns={(columns || [])}
                         data={(data || [])}
-                        customPageSize={1}
+                        customPageSize={10}
                         divclassName="-mx-5 overflow-x-auto"
                         tableclassName="w-full whitespace-nowrap"
                         theadclassName="ltr:text-left rtl:text-right bg-slate-100 text-slate-500 dark:text-zink-200 dark:bg-zink-600"
