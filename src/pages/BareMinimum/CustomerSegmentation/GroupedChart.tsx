@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import ReactApexChart from "react-apexcharts";
 import useChartColors from "Common/useChartColors";
 
 const GroupedChart = ({ chartId }: any) => {
+    const [chartData, setChartData] = useState({ labels: [], series: [] });
+    useEffect(() => {
+        fetch('https://ps01cs2-g463lwzijq-et.a.run.app/customers-groupchart')
+          .then(response => response.json())
+          .then(data => setChartData(data))
+          .catch(error => console.error('Error fetching data:', error));
+      }, []);
 
     const chartColors = useChartColors(chartId);
     const series = [{
