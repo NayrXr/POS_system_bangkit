@@ -17,14 +17,8 @@ const HRDashboard = () => {
     return (
         <React.Fragment>
             <BreadCrumb title='Sales Forecasting' pageTitle='Dashboards' />
-            <div className="grid grid-cols-12 2xl:grid-cols-12 gap-x-5">
+            <div className="grid grid-cols-12 gap-x-5">
                 <Widgets />
-            </div>
-            <div className="grid grid-cols-12 2xl:grid-cols-12 gap-x-5">
-                <Widgets1 />
-            </div>
-            <div className="grid grid-cols-12 2xl:grid-cols-12 gap-x-5">
-                <Widgets2 />
             </div>
             <div className="order-5 col-span-12 2xl:order-1 card 2xl:row-span-2 2xl:col-span-8">
                 <div className="card-body">

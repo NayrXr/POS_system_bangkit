@@ -1,18 +1,26 @@
 import TableContainer from 'Common/TableContainer';
-import React, { useMemo, useState } from 'react';
-import { example } from "./data/datacustomersegmentation";
+import React, { useMemo, useState, useEffect} from 'react';
+import fetchData from "./data/datacustomersegmentation";
 import { CheckCircle2, Search, XCircle } from 'lucide-react';
 import filterDataBySearch from 'Common/filterDataBySearch';
 
 const ProductsStatistics = () => {
 
-    const [data, setData] = useState(example);
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const getData = async () => {
+            const dataRFM = await fetchData();
+            setData(dataRFM);
+        };
+        getData();
+    }, []);
 
     // Search Data
     const filterSearchData = (e: any) => {
         const search = e.target.value;
-        const keysToSearch = ['productName', 'status'];
-        filterDataBySearch(example, search, keysToSearch, setData);
+        const keysToSearch = ['customer_name', 'segment'];
+        filterDataBySearch(data, search, keysToSearch, setData);
     };
 
     const columns = useMemo(() => [
@@ -32,69 +40,34 @@ const ProductsStatistics = () => {
             ),
         },
         {
-            header: "Products",
-            accessorKey: "productName",
+            header: "ID",
+            accessorKey: "ID",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "Price",
-            accessorKey: "price",
+            header: "customer_name",
+            accessorKey: "customer_name",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "Income",
-            accessorKey: "income",
+            header: "membership",
+            accessorKey: "membership",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "Sales",
-            accessorKey: "sales",
+            header: "segment",
+            accessorKey: "segment",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "View",
-            accessorKey: "view",
+            header: "total_spend",
+            accessorKey: "total_spend",
             enableColumnFilter: false,
             enableSorting: true,
-        },
-        {
-            header: "Click",
-            accessorKey: "click",
-            enableColumnFilter: false,
-            enableSorting: true,
-        },
-        {
-            header: "Click (%)",
-            accessorKey: "clickPercentage",
-            enableColumnFilter: false,
-            enableSorting: true,
-        },
-        {
-            header: "Status",
-            accessorKey: "status",
-            enableColumnFilter: false,
-            enableSorting: true,
-            cell: (cell: any) => (
-                <>
-                    {cell.row.original.status === "Active" ? (
-                        <span className="inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded border bg-green-100 border-transparent text-green-500 dark:bg-green-500/20 dark:border-transparent">
-                            <CheckCircle2 className="size-3 ltr:mr-1 rtl:ml-1"></CheckCircle2>
-                            {cell.row.original.status}
-                        </span>
-                    ) : (
-                        <span className="inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded border bg-red-100 border-transparent text-red-500 dark:bg-red-500/20 dark:border-transparent">
-                            <XCircle className="size-3 ltr:mr-1 rtl:ml-1"></XCircle>
-                            {cell.row.original.status}
-                        </span>
-                    )
-                    }
-
-                </>
-            ),
         },
     ], []
     );
@@ -105,7 +78,7 @@ const ProductsStatistics = () => {
                     <div className="grid items-center grid-cols-1 gap-3 mb-5 xl:grid-cols-12">
                         <div className="xl:col-span-3">
                             <h6 className="text-15">Products Statistics</h6>
-                        </div>
+                            </div>
                         <div className="xl:col-span-3 xl:col-start-10">
                             <div className="flex gap-3">
                                 <div className="relative grow">
@@ -120,7 +93,7 @@ const ProductsStatistics = () => {
                         isPagination={true}
                         columns={(columns || [])}
                         data={(data || [])}
-                        customPageSize={1}
+                        customPageSize={50}
                         divclassName="-mx-5 overflow-x-auto"
                         tableclassName="w-full whitespace-nowrap"
                         theadclassName="ltr:text-left rtl:text-right bg-slate-100 text-slate-500 dark:text-zink-200 dark:bg-zink-600"

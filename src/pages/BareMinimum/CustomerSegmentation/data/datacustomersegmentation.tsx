@@ -1,18 +1,9 @@
+import React, { useEffect, useState } from 'react';
 
+const fetchData = async () => {
+    const response = await fetch('https://ps01rfm-g463lwzijq-et.a.run.app/api/customer-segments-table');
+    const dataMBA = await response.json();
+    return dataMBA;
+};
 
-
-
-const example = [
-    {
-        id: "productsCheck1",
-        productName: "SmartTech Pro-4K Ultra HD TV",
-        price: "$1,542.99",
-        income: "$12.36k",
-        sales: "3,217",
-        view: "21,451",
-        click: "16,287",
-        clickPercentage: "39.56%",
-        status: "Active"
-    }];
-
-export {example};
+export default fetchData;
