@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState, useEffect} from 'react';
 import ReactApexChart from "react-apexcharts";
 import useChartColors from "Common/useChartColors";
 
 const DistributedColumns = ({ chartId }: any) => {
 
+    const [chartData, setChartData] = useState({ monetary: [], segment: [] });
+    useEffect(() => {
+        fetch('https://ps01rfm-g463lwzijq-et.a.run.app/api/rfm-barplot')
+          .then(response => response.json())
+          .then(data => setChartData(data))
+          .catch(error => console.error('Error fetching data:', error));
+      }, []);
+
     const chartColors = useChartColors(chartId);
 
     //Distributed Columns
     const series = [{
-        data: [21, 22, 10, 28, 16, 21, 13, 30]
+        data: chartData.monetary
     }];
     var options : any = {
         chart: {
@@ -34,16 +42,7 @@ const DistributedColumns = ({ chartId }: any) => {
             show: false
         },
         xaxis: {
-            categories: [
-                ['John', 'Doe'],
-                ['Joe', 'Smith'],
-                ['Jake', 'Williams'],
-                'Amber',
-                ['Peter', 'Brown'],
-                ['Mary', 'Evans'],
-                ['David', 'Wilson'],
-                ['Lily', 'Roberts'],
-            ],
+            categories: chartData.segment,
             labels: {
                 style: {
                     colors: chartColors,

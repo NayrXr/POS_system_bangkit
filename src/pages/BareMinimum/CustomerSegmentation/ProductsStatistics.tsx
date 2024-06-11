@@ -19,7 +19,7 @@ const ProductsStatistics = () => {
     // Search Data
     const filterSearchData = (e: any) => {
         const search = e.target.value;
-        const keysToSearch = ['customer_name', 'segment'];
+        const keysToSearch = ['customer_name', 'segment','membership'];
         filterDataBySearch(data, search, keysToSearch, setData);
     };
 
@@ -46,25 +46,25 @@ const ProductsStatistics = () => {
             enableSorting: true,
         },
         {
-            header: "customer_name",
+            header: "Customer Name",
             accessorKey: "customer_name",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "membership",
+            header: "Membership",
             accessorKey: "membership",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "segment",
+            header: "Segment",
             accessorKey: "segment",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "total_spend",
+            header: "Total Spend in Rupiah",
             accessorKey: "total_spend",
             enableColumnFilter: false,
             enableSorting: true,
@@ -77,7 +77,7 @@ const ProductsStatistics = () => {
                 <div className="card-body">
                     <div className="grid items-center grid-cols-1 gap-3 mb-5 xl:grid-cols-12">
                         <div className="xl:col-span-3">
-                            <h6 className="text-15">Products Statistics</h6>
+                            <h6 className="text-15">Customer Data</h6>
                             </div>
                         <div className="xl:col-span-3 xl:col-start-10">
                             <div className="flex gap-3">
@@ -85,7 +85,6 @@ const ProductsStatistics = () => {
                                     <input type="text" className="ltr:pl-8 rtl:pr-8 search form-input border-slate-200 dark:border-zink-500 focus:outline-none focus:border-custom-500 disabled:bg-slate-100 dark:disabled:bg-zink-600 disabled:border-slate-300 dark:disabled:border-zink-500 dark:disabled:text-zink-200 disabled:text-slate-500 dark:text-zink-100 dark:bg-zink-700 dark:focus:border-custom-800 placeholder:text-slate-400 dark:placeholder:text-zink-200" placeholder="Search for ..." autoComplete="off" onChange={(e) => filterSearchData(e)} />
                                     <Search className="inline-block size-4 absolute ltr:left-2.5 rtl:right-2.5 top-2.5 text-slate-500 dark:text-zink-200 fill-slate-100 dark:fill-zink-600"></Search>
                                 </div>
-                                <button type="button" className="bg-white border-dashed text-custom-500 btn border-custom-500 hover:text-custom-500 hover:bg-custom-50 hover:border-custom-600 focus:text-custom-600 focus:bg-custom-50 focus:border-custom-600 active:text-custom-600 active:bg-custom-50 active:border-custom-600 dark:bg-zink-700 dark:ring-custom-400/20 dark:hover:bg-custom-800/20 dark:focus:bg-custom-800/20 dark:active:bg-custom-800/20"><i className="align-baseline ltr:pr-1 rtl:pl-1 ri-download-2-line"></i> Export</button>
                             </div>
                         </div>
                     </div>

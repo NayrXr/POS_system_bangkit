@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
 import BreadCrumb from 'Common/BreadCrumb';
 import Widgets from './Widgets';
+import { DataLabels } from './DataLabels';
 import Widgets1 from './Widgets1'
 import Widgets2 from './Widgets2';
 
@@ -54,6 +55,14 @@ const HRDashboard = () => {
                     <div id="chartdiv"></div>
                 </div>
             </div>
+
+            <div className="card">
+                    <div className="card-body">
+                        <h6 className="mb-4 text-15">Column with Data Labels</h6>
+                        <DataLabels chartId="columnWithDatalabelChart" />
+                    </div>
+                </div>
+
             <div><DataLabelsBar/> </div>
         </React.Fragment>
     );
