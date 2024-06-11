@@ -51,8 +51,8 @@ const Analytics = () => {
                     <div className="card-body">
                       
                     <h6 className="text-15 grow"> Lost Customers </h6>
-                    <p>  Bought most recently and most often, and spend the most</p>
-                    <p>  No price incentives, new products, and loyalty programs</p>
+                    <p>  Haven’t purchased for some time, but purchased frequently and spend the most</p>
+                    <p>  Aggressive price incentives</p>
                     <br></br>
                     <h6 className="text-15 grow"> Lost Cheap Customers </h6>
                     <p>  Last purchased long ago, purchased few, and spent little</p>
