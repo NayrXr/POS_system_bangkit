@@ -26,7 +26,7 @@ const ProductsStatistics = () => {
     const columns = useMemo(() => [
         {
             header: () => <div className="flex items-center h-full">
-                <input id="productsCheck1" className="size-4 cursor-pointer bg-white border border-slate-200 checked:bg-none dark:bg-zink-700 dark:border-zink-500 rounded-sm appearance-none arrow-none relative after:absolute after:content-['\eb7b'] after:top-0 after:left-0 after:font-remix after:leading-none after:opacity-0 checked:after:opacity-100 after:text-custom-500 checked:border-custom-500 dark:after:text-custom-500 dark:checked:border-custom-800" type="checkbox" />
+
             </div>,
             accessorKey: "#",
             enableColumnFilter: false,
@@ -40,62 +40,32 @@ const ProductsStatistics = () => {
             ),
         },
         {
-            header: "Antecedent Support",
-            accessorKey: "antecedent support",
-            enableColumnFilter: false,
-            enableSorting: true,
-        },
-        {
-            header: "antecedents",
+            header: "Antecedents",
             accessorKey: "antecedents",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "confidence",
+            header: "Confidence",
             accessorKey: "confidence",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "consequent support",
-            accessorKey: "consequent support",
-            enableColumnFilter: false,
-            enableSorting: true,
-        },
-        {
-            header: "consequents",
+            header: "Consequents",
             accessorKey: "consequents",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "count",
-            accessorKey: "count",
-            enableColumnFilter: false,
-            enableSorting: true,
-        },
-        {
-            header: "leverage (%)",
-            accessorKey: "leverage",
-            enableColumnFilter: false,
-            enableSorting: true,
-        },
-        {
-            header: "lift",
+            header: "Lift",
             accessorKey: "lift",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "support",
+            header: "Support",
             accessorKey: "support",
-            enableColumnFilter: false,
-            enableSorting: true,
-        },
-        {
-            header: "zhangs_metric",
-            accessorKey: "zhangs_metric",
             enableColumnFilter: false,
             enableSorting: true,
         },
@@ -107,7 +77,7 @@ const ProductsStatistics = () => {
                 <div className="card-body">
                     <div className="grid items-center grid-cols-1 gap-3 mb-5 xl:grid-cols-12">
                         <div className="xl:col-span-3">
-                            <h6 className="text-15">Products Statistics</h6>
+                            <h6 className="text-15">Products MBA</h6>
                         </div>
                         <div className="xl:col-span-3 xl:col-start-10">
                             <div className="flex gap-3">

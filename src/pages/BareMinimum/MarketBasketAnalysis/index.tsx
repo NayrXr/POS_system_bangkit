@@ -49,19 +49,25 @@ const Ecommerce = () => {
                         <h2 className="mb-4 text-15">{legendata.insights[2]} </h2>
                         <h2 className="mb-4 text-15">{legendata.insights[3]} </h2>
                         <h2 className="mb-4 text-15">{legendata.insights[4]} </h2>
-                        <p> "Metric": "Support",<br></br>
-                            "Definition": "Proportion of transactions that contain a specific itemset.",<br></br>
-                            "Interpretation": "Indicates how frequently an itemset (combination of items) appears together in the dataset."<br></br>
-                            'Metric": "Confidence",<br></br>
-                            "Definition": "Likelihood of item Y being purchased when item X is purchased.",<br></br>
-                            "Interpretation": "Measures the strength of the rule (association) that if item X is purchased, then item Y is also likely to be purchased."<br></br>
-                            "Metric": "Lift",<br></br>
-                            "Definition": "Measures how much more likely item Y is to be purchased when item X is purchased, compared to its likelihood without considering item X.",<br></br>
-                            "Interpretation": "Indicates the strength of the association between item X and item Y, considering the baseline probability of purchasing item Y."<br></br>
-                        </p>
                     </div>
                 </div>
             </div>
+            <div className="card">
+                    <div className="card-body" style={{ flex: 1, width: '100%', height: '100%', margin: 0, padding: '20px', boxSizing: 'border-box' }}>
+                    <h6 className="text-15 grow"> Support </h6>
+                    <p> Proportion of transactions that contain a specific itemset.</p>
+                    <p> Indicates how frequently an itemset (combination of items) appears together in the dataset.  </p>
+
+                    <h6 className="text-15 grow"> Confidence </h6>
+                    <p> Likelihood of item Y being purchased when item X is purchased.</p>
+                    <p> Measures the strength of the rule (association) that if item X is purchased, then item Y is also likely to be purchased.  </p>
+
+                    <h6 className="text-15 grow"> Lift </h6>
+                    <p> Measures how much more likely item Y is to be purchased when item X is purchased, compared to its likelihood without considering item X.</p>
+                    <p> Indicates the strength of the association between item X and item Y, considering the baseline probability of purchasing item Y.  </p>
+
+                    </div>
+                </div>
                 <div>
                     < ProductsStatistics />
                 </div>
