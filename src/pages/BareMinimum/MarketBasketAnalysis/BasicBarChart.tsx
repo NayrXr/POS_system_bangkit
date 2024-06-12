@@ -15,6 +15,7 @@ const BasicBarChart = ({ chartId }: any) => {
     const chartColors = useChartColors(chartId);
     //basic bar
     const series = [{
+        name: 'Lift',
         data: chartData.values
     }];
     var options : any = {

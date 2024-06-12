@@ -25,35 +25,20 @@ const ProductsStatistics = () => {
 
     const columns = useMemo(() => [
         {
-            header: () => <div className="flex items-center h-full">
-
-            </div>,
-            accessorKey: "#",
-            enableColumnFilter: false,
-            enableSorting: true,
-            cell: (cell: any) => (
-                <>
-                    <div className="flex items-center h-full">
-                        <input id="productsCheck1" className="size-4 cursor-pointer bg-white border border-slate-200 checked:bg-none dark:bg-zink-700 dark:border-zink-500 rounded-sm appearance-none arrow-none relative after:absolute after:content-['\eb7b'] after:top-0 after:left-0 after:font-remix after:leading-none after:opacity-0 checked:after:opacity-100 after:text-custom-500 checked:border-custom-500 dark:after:text-custom-500 dark:checked:border-custom-800" type="checkbox" />
-                    </div>
-                </>
-            ),
-        },
-        {
             header: "Antecedents",
             accessorKey: "antecedents",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "Confidence",
-            accessorKey: "confidence",
+            header: "Consequents",
+            accessorKey: "consequents",
             enableColumnFilter: false,
             enableSorting: true,
         },
         {
-            header: "Consequents",
-            accessorKey: "consequents",
+            header: "Confidence",
+            accessorKey: "confidence",
             enableColumnFilter: false,
             enableSorting: true,
         },

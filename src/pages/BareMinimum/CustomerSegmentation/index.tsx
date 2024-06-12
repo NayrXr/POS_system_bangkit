@@ -33,7 +33,7 @@ const Analytics = () => {
           </div>
           <div className="col-span-12 lg:col-span-6 order-[14] 2xl:order-1 card 2xl:col-span-3">
             <div className="card-body">
-                    <h6 className="mb-3 text-15">Total Individual Per Membership</h6>
+                    <h6 className="mb-3 text-15">TotalSpend/previous</h6>
                     <GroupedChart />
                 </div>
             </div>
@@ -42,9 +42,10 @@ const Analytics = () => {
       <div className="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
         <div className="card">
                     <div className="card-body">
+                    <h1 className="text-22 grow"> Customer Segmentation </h1>
                     <h6 className="text-15 grow"> Best Customer </h6>
                     <p>  Bought most recently and most often, and spend the most</p>
-                    <p>  No price incentives, new products, and loyalty programs</p>
+                    <p>  Suggestion: No price incentives, new products, and loyalty programs</p>
                     <br></br>
                     <h6 className="text-15 grow"> Loyal Customers </h6>
                     <p>  Buy most frequently</p>

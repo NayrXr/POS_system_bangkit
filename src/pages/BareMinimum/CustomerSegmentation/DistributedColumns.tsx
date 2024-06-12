@@ -48,15 +48,29 @@ const DistributedColumns = ({ chartId }: any) => {
                     colors: chartColors,
                     fontSize: '12px'
                 }
+            },
+            title: {
+                text: 'Segment',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: 'bold',
+                }
             }
         },
         yaxis: {
             labels: {
-                formatter: function (value : number) {
+                formatter: function (value: number) {
                     return new Intl.NumberFormat('id-ID', {
                         style: 'currency',
                         currency: 'IDR'
                     }).format(value);
+                }
+            },
+            title: {
+                text: 'Total Revenue',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: 'bold',
                 }
             }
         }

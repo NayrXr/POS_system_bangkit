@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import ReactApexChart from "react-apexcharts";
 import useChartColors from "Common/useChartColors";
 
 const DataLabels = ({ chartId }: any) => {
+    const [chartData, setChartData] = useState({ month: [], sales: [] });
+    useEffect(() => {
+        fetch('https://ps01sf-g463lwzijq-et.a.run.app/monthly-sales-latest-year')
+          .then(response => response.json())
+          .then(data => setChartData(data))
+          .catch(error => console.error('Error fetching data:', error));
+      }, []);
 
     const chartColors = useChartColors(chartId);
 
     //Column with Data Labels
     const series = [{
-        name: 'Inflation',
-        data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+        name: 'Sales',
+        data: chartData.sales
     }];
     var options : any = {
         chart: {
@@ -27,7 +34,7 @@ const DataLabels = ({ chartId }: any) => {
         dataLabels: {
             enabled: true,
             formatter: function (val : any) {
-                return val + "%";
+                return val;
             },
             offsetY: -20,
             style: {
@@ -37,7 +44,7 @@ const DataLabels = ({ chartId }: any) => {
         },
 
         xaxis: {
-            categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            categories: chartData.month,
             position: 'top',
             axisBorder: {
                 show: false
@@ -71,14 +78,14 @@ const DataLabels = ({ chartId }: any) => {
             labels: {
                 show: false,
                 formatter: function (val : any) {
-                    return val + "%";
+                    return val;
                 }
             }
 
         },
         colors: chartColors,
         title: {
-            text: 'Monthly Inflation in Argentina, 2002',
+            text: 'Monthly Sales Latest Year',
             floating: true,
             offsetY: 330,
             align: 'center',

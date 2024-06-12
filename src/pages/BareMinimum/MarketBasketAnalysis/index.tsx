@@ -37,14 +37,15 @@ const Ecommerce = () => {
             <div className="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
                 <div className="card">
                     <div className="card-body">
-                        <h6 className="mb-4 text-15">Basic</h6>
+                        <h6 className="mb-4 text-15">5 Bundle Items With The Highest Lift</h6>
                         <BasicBarChart chartId="basicBar" />
                     </div>
                 </div>
                 <div className="card">
                     <div className="card-body">
-                        <h6 className="mb-4 text-15">Legend</h6>
-                        <h2 className="mb-4 text-15">{legendata.insights[0]} </h2>
+                        <h2 className="text-17 grow">Offer Discount/Voucher/Bundle for These Pairs of Items to Increase Sales Revenue</h2>
+                        <br></br>
+                        <h2 className="mb-4 text-16">{legendata.insights[0]} </h2>
                         <h2 className="mb-4 text-15">{legendata.insights[1]} </h2>
                         <h2 className="mb-4 text-15">{legendata.insights[2]} </h2>
                         <h2 className="mb-4 text-15">{legendata.insights[3]} </h2>
@@ -54,6 +55,7 @@ const Ecommerce = () => {
             </div>
             <div className="card">
                     <div className="card-body" style={{ flex: 1, width: '100%', height: '100%', margin: 0, padding: '20px', boxSizing: 'border-box' }}>
+                    <h1 className="text-22 grow"> Market Basket Analysis</h1>
                     <h6 className="text-15 grow"> Support </h6>
                     <p> Proportion of transactions that contain a specific itemset.</p>
                     <p> Indicates how frequently an itemset (combination of items) appears together in the dataset.  </p>

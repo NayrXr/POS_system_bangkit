@@ -1,53 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import ReactApexChart from "react-apexcharts";
 import useChartColors from "Common/useChartColors";
 
 //import images 
 import logoSm from "assets/images/logo-sm.png";
 
-const PerspectiveChart = ({ chartId }: any) => {
+
+  const PerspectiveChart = ({ chartId }: { chartId: string }) => {
+    const [chartData, setChartData] = useState({ labels: [], series: [] });
+
+    useEffect(() => {
+        fetch('https://ps01sf-g463lwzijq-et.a.run.app/sales-of-every-product-last-month')
+            .then(response => response.json())
+            .then(data => {
+                // Ensure data has the expected structure before updating state
+                if (data.labels && data.series) {
+                    setChartData(data);
+                } else {
+                    console.error('Unexpected data format:', data);
+                }
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
 
     const chartColors = useChartColors(chartId);
     const series = [
         {
-            data: [
-                {
-                    x: 'React',
-                    y: 218
-                },
-                {
-                    x: 'TailwindCSS',
-                    y: 187
-                },
-                {
-                    x: 'Angular',
-                    y: 134
-                },
-                {
-                    x: 'Vue Js',
-                    y: 55
-                },
-                {
-                    x: 'Laravel',
-                    y: 99
-                },
-                {
-                    x: 'PHP',
-                    y: 34
-                },
-                {
-                    x: 'ASP.Net',
-                    y: 86
-                },
-                {
-                    x: 'Django',
-                    y: 30
-                },
-                {
-                    x: 'CI',
-                    y: 44
-                }
-            ]
+            data: chartData.labels.map((label, index) => ({
+                x: chartData.labels[index] || 0,
+                y: chartData.series[index] || 0
+            }))
         }
     ];
     var options: any = {
@@ -71,6 +53,7 @@ const PerspectiveChart = ({ chartId }: any) => {
             },
         },
         colors: chartColors,
+        
     };
     return (
         <React.Fragment>
