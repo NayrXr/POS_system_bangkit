@@ -85,7 +85,7 @@ const DataLabels = ({ chartId }: any) => {
         },
         colors: chartColors,
         title: {
-            text: 'Monthly Sales Latest Year',
+            text: 'Monthly Sales This Year',
             floating: true,
             offsetY: 330,
             align: 'center',

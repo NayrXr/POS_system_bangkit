@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import ReactApexChart from "react-apexcharts";
 import useChartColors from "Common/useChartColors";
 
 const DataLabelsBar = ({ chartId }: any) => {
-    
+    const [chartData, setChartData] = useState({ product_name: [], sales: [] });
+    useEffect(() => {
+        fetch('https://ps01sf-g463lwzijq-et.a.run.app/top-3-products-last-month')
+          .then(response => response.json())
+          .then(data => setChartData(data))
+          .catch(error => console.error('Error fetching data:', error));
+      }, []);
+
     const chartColors = useChartColors(chartId);
     //Custom DataLabels Bar
     const series = [{
-        data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+        data: chartData.sales
     }];
     var options : any = {
         chart: {
@@ -44,9 +51,7 @@ const DataLabelsBar = ({ chartId }: any) => {
             colors: ['#fff']
         },
         xaxis: {
-            categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan',
-                'United States', 'China', 'India'
-            ],
+            categories: chartData.product_name,
         },
         yaxis: {
             labels: {
@@ -54,12 +59,12 @@ const DataLabelsBar = ({ chartId }: any) => {
             }
         },
         title: {
-            text: 'Custom DataLabels',
+            text: 'Top 3 Products Last Month',
             align: 'center',
             floating: true
         },
         subtitle: {
-            text: 'Category Names as DataLabels inside bars',
+            text: '',
             align: 'center',
         },
         tooltip: {

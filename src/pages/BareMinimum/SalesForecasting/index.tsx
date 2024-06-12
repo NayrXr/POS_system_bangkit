@@ -34,7 +34,7 @@ const HRDashboard = () => {
 
             <div className="card">
                     <div className="card-body">
-                        <h6 className="mb-4 text-15">Monthly Sales Latest Year</h6>
+                        <h6 className="mb-4 text-15">Monthly Sales This Year</h6>
                         <DataLabels chartId="columnWithDatalabelChart" />
                     </div>
                 </div>
