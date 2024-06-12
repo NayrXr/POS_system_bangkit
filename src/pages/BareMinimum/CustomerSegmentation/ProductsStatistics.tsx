@@ -4,6 +4,17 @@ import fetchData from "./data/datacustomersegmentation";
 import { CheckCircle2, Search, XCircle } from 'lucide-react';
 import filterDataBySearch from 'Common/filterDataBySearch';
 
+
+interface CellInfo {
+    getValue: () => number;
+}
+
+
+const formatRupiah = (value: number): string => {
+    return `Rp ${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+};
+
+
 const ProductsStatistics = () => {
 
     const [data, setData] = useState([]);
@@ -19,7 +30,7 @@ const ProductsStatistics = () => {
     // Search Data
     const filterSearchData = (e: any) => {
         const search = e.target.value;
-        const keysToSearch = ['customer_name', 'segment','membership'];
+        const keysToSearch = ['customer_name', 'segment','membership','ID'];
         filterDataBySearch(data, search, keysToSearch, setData);
     };
 
@@ -53,6 +64,7 @@ const ProductsStatistics = () => {
             accessorKey: "total_spend",
             enableColumnFilter: false,
             enableSorting: true,
+            cell: (info: CellInfo) => formatRupiah(info.getValue()),
         },
     ], []
     );

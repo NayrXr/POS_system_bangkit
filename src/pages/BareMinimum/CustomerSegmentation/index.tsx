@@ -41,38 +41,57 @@ const Analytics = () => {
 
       <div className="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
         <div className="card">
-                    <div className="card-body">
-                    <h1 className="text-22 grow"> Customer Segmentation </h1>
-                    <h6 className="text-15 grow"> Best Customer </h6>
-                    <p>  Bought most recently and most often, and spend the most</p>
-                    <p>  Suggestion: No price incentives, new products, and loyalty programs</p>
+        <div className="card-body">
+        <h1 className="text-22 grow"> Customer Segmentation </h1>
+                    <h5 className="text-18 grow"> Best Customer </h5>
+                    <h3 className="text-15 grow"> Description </h3>
+                    <p>  Customers who made the most recent purchases, purchased the most frequently, and bought the highest number of items.</p>
+                    <h3 className="text-15 grow"> Marketing </h3>
+                    <p>   By recognizing and rewarding your best customers with exclusive discounts, enhanced loyalty rewards, personalized recommendations, early access to sales, and thank-you gifts, you can strengthen their loyalty, increase their lifetime value, and encourage them to continue being advocates for your brand.</p>
                     <br></br>
-                    <h6 className="text-15 grow"> Loyal Customers </h6>
-                    <p>  Buy most frequently</p>
-                    <p>  Use R and M to further segment</p>
+
+                    <h5 className="text-18 grow"> Loyal Customers </h5>
+                    <h3 className="text-15 grow"> Description </h3>
+                    <p> Customer who purchased the most frequently</p>
+                    <h3 className="text-15 grow"> Marketing </h3>
+                    <p>  By recognizing and rewarding your loyal customers with personalized offers, exclusive benefits, and enhanced engagement, you can strengthen their loyalty, increase their lifetime value, and encourage them to continue being advocates for your brand.</p>
                     <br></br>
-                    <h6 className="text-15 grow"> Big Spenders </h6>
-                    <p>  Spend the most</p>
-                    <p>  Market your most expensive products</p>
+
+                    <h5 className="text-18 grow"> Big Spenders Customers</h5>
+                    <h3 className="text-15 grow"> Description </h3>
+                    <p>  Customer who spends the most on your products</p>
+                    <h3 className="text-15 grow"> Marketing </h3>
+                    <p> By recognizing and rewarding your big spenders' customers with exclusive discounts, offering unique rewards only available to them, giving thank-you gifts, and providing faster loyalty points accumulation to enhance their shopping experience, foster loyalty, and increase their lifetime value</p>
                     <br></br>
-                    <h6 className="text-15 grow"> Almost Lost </h6>
-                    <p>  Haven’t purchased for some time, but purchased frequently and spend the most</p>
-                    <p>  Aggressive price incentives</p>
                     </div>
         </div>
         <div className="card">
                     <div className="card-body">
-                      
-                    <h6 className="text-15 grow"> Lost Customers </h6>
-                    <p>  Haven’t purchased for some time, but purchased frequently and spend the most</p>
-                    <p>  Aggressive price incentives</p>
+                    <h5 className="text-18 grow"> Almost Lost Customers</h5>
+                    <h3 className="text-15 grow"> Description </h3>
+                    <p> Customers who haven't purchased for some time but used to purchase frequently and spend the most</p>
+                    <h3 className="text-15 grow"> Marketing </h3>
+                    <p> By implementing personalized emails/messages, offering special incentives, limited-time offer, offer bonus loyalty points/rewards if they make a purchase within a specific timeframe, send a survey to understand why they stopped purchasing and what changes they would like to see.</p>
+
                     <br></br>
-                    <h6 className="text-15 grow"> Lost Cheap Customers </h6>
-                    <p>  Last purchased long ago, purchased few, and spent little</p>
-                    <p>  Don’t spend too much trying to re-acquire</p>
+                    <h5 className="text-18 grow"> Lost Customers </h5>
+                    <h3 className="text-15 grow"> Description </h3>
+                    <p>  Customers who have ceased all transactions but who previously purchased frequently and spent the most</p>
+                    <h3 className="text-15 grow"> Marketing </h3>
+                    <p>  By understanding the reasons for their departure, learning from their feedback, and exploring possible reactivation strategies if feasible</p>
                     <br></br>
-                    <h6 className="text-15 grow"> Others </h6>
-                    <p>  Diverse group of customers with varying engagement levels</p>
+
+                    <h5 className="text-18 grow"> Lost Cheap Customers </h5>
+                    <h3 className="text-15 grow"> Description </h3>
+                    <p>  Customers who purchased a long time ago, infrequently, and spent little</p>
+                    <h3 className="text-15 grow"> Marketing </h3>
+                    <p>  Don’t spend too much trying to re-acquire, but you can offer inexpensive incentives or encourage them to join your loyalty program by offering points on sign-up</p>
+                    <br></br>
+
+                    <h5 className="text-18 grow"> Others </h5>
+                    <h3 className="text-15 grow"> Description </h3>
+                    <p>  Diverse group of customers with varying engagement levels.</p>
+                    <h3 className="text-15 grow"> Marketing </h3>
                     <p>  Test different marketing approaches (e.g., discounts, personalized emails) and measure their impact</p>
                     </div>
         </div>
