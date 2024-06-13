@@ -24,19 +24,13 @@ const Analytics = () => {
       </div>
 
 
-      <div className="grid grid-cols-12 gap-x-5">
+      <div>
         <div className="col-span-12 lg:col-span-6 order-[14] 2xl:order-1 card 2xl:col-span-3">
                 <div className="card-body">
                     <h6 className="mb-3 text-15">Total Revenue Per Segment</h6>
                     <DistributedColumns />
                 </div>
           </div>
-          <div className="col-span-12 lg:col-span-6 order-[14] 2xl:order-1 card 2xl:col-span-3">
-            <div className="card-body">
-                    <h6 className="mb-3 text-15">TotalSpend/previous</h6>
-                    <GroupedChart />
-                </div>
-            </div>
       </div>
 
       <div className="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
