@@ -73,8 +73,24 @@ const DistributedColumns = ({ chartId }: any) => {
                     fontWeight: 'bold',
                 }
             }
+        },
+        tooltip: {
+            y: {
+                formatter: function (value:number) {
+                    return new Intl.NumberFormat('id-ID', {
+                        style: 'currency',
+                        currency: 'IDR'
+                    }).format(value);
+                },
+                title: {
+                    formatter: function () {
+                        return 'Revenue'; // Change tooltip title to 'Revenue'
+                    }
+                }
+            }
         }
     };
+    
     return (
         <React.Fragment>
             <ReactApexChart
