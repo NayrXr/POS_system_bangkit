@@ -4,7 +4,7 @@ import useChartColors from "Common/useChartColors";
 
 const DistributedColumns = ({ chartId }: any) => {
 
-    const [chartData, setChartData] = useState({ monetary: [], segment: [] });
+    const [chartData, setChartData] = useState({ average_monetary: [], segment: [] });
     useEffect(() => {
         fetch('https://ps01rfm-g463lwzijq-et.a.run.app/api/rfm-barplot')
           .then(response => response.json())
@@ -16,7 +16,7 @@ const DistributedColumns = ({ chartId }: any) => {
 
     //Distributed Columns
     const series = [{
-        data: chartData.monetary
+        data: chartData.average_monetary
     }];
     var options : any = {
         chart: {

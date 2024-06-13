@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const fetchData = async () => {
-    const response = await fetch('https://ps01mba2-g463lwzijq-et.a.run.app/api/mba-dataframe');
+    const response = await fetch('https://ps01mba-g463lwzijq-et.a.run.app/api/mba-dataframe');
     const dataMBA = await response.json();
     return dataMBA;
 };
