@@ -37,12 +37,6 @@ const Ecommerce = () => {
             <div className="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
                 <div className="card">
                     <div className="card-body">
-                        <h6 className="mb-4 text-15">5 Bundle Items With The Highest Lift</h6>
-                        <BasicBarChart chartId="basicBar" />
-                    </div>
-                </div>
-                <div className="card">
-                    <div className="card-body">
                         <h2 className="text-17 grow">Offer Discount/Voucher/Bundle for These Pairs of Items to Increase Sales Revenue</h2>
                         <br></br>
                         <h2 className="mb-4 text-16">{legendata.insights[0]} </h2>

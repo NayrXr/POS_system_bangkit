@@ -2,10 +2,16 @@ import React, { useEffect, useState } from 'react';
 import ReactApexChart from "react-apexcharts";
 import useChartColors from "Common/useChartColors";
 
+
+
 //import images 
 import logoSm from "assets/images/logo-sm.png";
 
+const datatemp = [{
+    data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380] }];
 
+
+    
   const PerspectiveChart = ({ chartId }: { chartId: string }) => {
     const [chartData, setChartData] = useState({ labels: [], series: [] });
 
