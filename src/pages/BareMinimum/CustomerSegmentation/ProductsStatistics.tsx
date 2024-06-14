@@ -30,7 +30,7 @@ const ProductsStatistics = () => {
     // Search Data
     const filterSearchData = (e: any) => {
         const search = e.target.value;
-        const keysToSearch = ['customer_name', 'segment','membership','ID'];
+        const keysToSearch = ['customer_name', 'segment','membership'];
         filterDataBySearch(data, search, keysToSearch, setData);
     };
 

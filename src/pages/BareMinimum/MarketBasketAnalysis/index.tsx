@@ -34,7 +34,7 @@ const Ecommerce = () => {
     return (
         <React.Fragment>
             <BreadCrumb title='MBA' pageTitle='Dashboards' />
-            <div className="grid grid-cols-1 gap-x-5 xl:grid-cols-2">
+            <div className="grid grid-cols-1 gap-x-5">
                 <div className="card">
                     <div className="card-body">
                         <h2 className="text-17 grow">Offer Discount/Voucher/Bundle for These Pairs of Items to Increase Sales Revenue</h2>
